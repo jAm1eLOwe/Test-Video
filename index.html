@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="src/main.css">
+
+    <title>Test HTML</title>
+  </head>
+  <body>
+    <h1>Embedded YT Video</h1>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kIdGm6FT1o4"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+      <div id="drop-area">
+        <form class="my-form">
+          <p>Upload multiple files with the button or by dragging and dropping images onto the dashed region</p>
+          <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          <label class="lblButton" for="fileElem">Select Some Files</label>
+        </form>
+        <div id="gallery"></div>
+      </div>
+
+    <button type="button" class='lblButton' onclick='uploadFiles()'>Upload</button>
+    <div id='output2'></div>
+
+    <div id="files">
+      <input type="file" name="file[]" />
+    </div>
+
+    <script src="src/javacript.js"></script>
+  </body>
+</html>
